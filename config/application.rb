@@ -19,5 +19,18 @@ module Me
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    # Default to mailcatcher
+    config.action_mailer.asset_host = 'localhost'
+    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+    config.action_mailer.raise_delivery_errors = false
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = { :address => "127.0.0.1", :port => 1025 }
+    config.whitelist_emails = false
+
   end
 end
+
+
+
+# config.assets.initialize_on_precompile = false
+# In case of Use Heroku add

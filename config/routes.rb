@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-
+  devise_for :admins
+  root 'welcome#index'
+  resources :articles
   # root 'welcome#index'
 
 
@@ -58,9 +59,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
-
-Me::Application.routes.draw do
-  resources :articles
-  root 'welcome#index'
 end
