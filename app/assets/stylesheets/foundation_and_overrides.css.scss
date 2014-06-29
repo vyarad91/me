@@ -12,6 +12,19 @@
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import "foundation/functions";
 
+$primary-color: #00bcd4;
+$secondary-color: #b2ebf2;
+$alert-color: #e51c23;
+$success-color: #8bc34a;
+$warning-color: #ff9800;
+$info-color: #03a9f4;
+
+$gray-lighter: lighten(#000, 90%);
+$gray-light: lighten(#000, 80%);
+$gray: lighten(#000, 60%);
+$gray-dark: lighten(#000, 40%);
+$gray-darker: lighten(#000, 20%);
+
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
 
@@ -40,10 +53,10 @@
 
 // We use these to control various global styles
 // $body-bg: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $body-font-weight: normal;
-// $body-font-style: normal;
+$body-font-color: $gray;
+$body-font-family: "Roboto", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-weight: 300;
+$body-font-style: normal;
 
 // We use this to control font-smoothing
 // $font-smoothing: antialiased;
@@ -54,12 +67,6 @@
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
@@ -119,9 +126,9 @@
 
 // We use these to control header font styles
 // $header-font-family: $body-font-family;
-// $header-font-weight: normal;
+$header-font-weight: 100;
 // $header-font-style: normal;
-// $header-font-color: #222;
+$header-font-color: $gray-dark;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
@@ -138,17 +145,17 @@
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
 // $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
-// $subheader-font-weight: normal;
+$subheader-font-weight: 300;
 // $subheader-top-margin: .2rem;
 // $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
-// $small-font-size: 60%;
+$small-font-size: rem-calc(12);
 // $small-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
-// $paragraph-font-weight: normal;
+$paragraph-font-weight: 300;
 // $paragraph-font-size: 1rem;
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);
@@ -179,7 +186,7 @@
 // $list-ordered-side-margin: 1.4rem;
 // $list-side-margin-no-bullet: 0;
 // $list-nested-margin: rem-calc(20);
-// $definition-list-header-weight: bold;
+$definition-list-header-weight: 300;
 // $definition-list-header-margin-bottom: .3rem;
 // $definition-list-margin-bottom: rem-calc(12);
 
@@ -192,7 +199,7 @@
 // $blockquote-cite-link-color: $blockquote-cite-font-color;
 
 // Acronym styles
-// $acronym-underline: 1px dotted #ddd;
+$acronym-underline: 1px dotted $gray-lighter;
 
 // We use these to control padding and margin
 // $microformat-padding: rem-calc(10 12);
@@ -201,20 +208,20 @@
 // We use these to control the border styles
 // $microformat-border-width: 1px;
 // $microformat-border-style: solid;
-// $microformat-border-color: #ddd;
+$microformat-border-color: $gray-lighter;
 
 // We use these to control full name font styles
-// $microformat-fullname-font-weight: bold;
+$microformat-fullname-font-weight: 300;
 // $microformat-fullname-font-size: rem-calc(15);
 
 // We use this to control the summary font styles
-// $microformat-summary-font-weight: bold;
+$microformat-summary-font-weight: 300;
 
 // We use this to control abbr padding
 // $microformat-abbr-padding: rem-calc(0 1);
 
 // We use this to control abbr font styles
-// $microformat-abbr-font-weight: bold;
+$microformat-abbr-font-weight: 300;
 // $microformat-abbr-font-decoration: none;
 
 // Accordion
@@ -336,12 +343,12 @@
 // We use these to control button text styles.
 // $button-font-family: $body-font-family;
 // $button-font-color: #fff;
-// $button-font-color-alt: #333;
+$button-font-color-alt: $gray-dark;
 // $button-font-tny: rem-calc(11);
 // $button-font-sml: rem-calc(13);
 // $button-font-med: rem-calc(16);
 // $button-font-lrg: rem-calc(20);
-// $button-font-weight: normal;
+$button-font-weight: 700;
 // $button-font-align: center;
 
 // We use these to control various hover effects.

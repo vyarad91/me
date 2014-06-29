@@ -3,20 +3,32 @@
   %head
     %meta{charset: "utf-8"}/
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %link{href: "http://fonts.googleapis.com/css?family=Roboto:400,100,300,700", rel: "stylesheet", type: "text/css"}
     %title= content_for?(:title) ? yield(:title) : "Vicente Yarad"
     = stylesheet_link_tag "application"
     = javascript_include_tag "vendor/modernizr"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    - if notice
-      %p.notice= notice
-    - if alert
-      %p.alert= alert
-
-    - if admin_signed_in?
-      = link_to "Logout", destroy_admin_session_path, method: :delete
-    - else
-      = link_to "Sign-in", new_admin_session_path
+    .hero
+      - if notice
+        %p.notice= notice
+      - if alert
+        %p.alert= alert
+      %nav
+        .row
+          .small-12.columns.clearfix
+            = link_to "VY", root_path, class: "left logo"
+            %ul.inline-list.right
+              %li
+                = link_to "Me", root_path, class: is_active?(root_path)
+              %li
+                = link_to "Portafolio", articles_path, class: is_active?(articles_path)
+              %li
+                = link_to "Contact", "mailto:hey@vicenteyarad.com"
+              %li
+                - if admin_signed_in?
+                  = link_to "Logout", destroy_admin_session_path, method: :delete
+                - else
+                  = link_to "Sign-in", new_admin_session_path, class: is_active?(new_admin_session_path)
     = yield
-

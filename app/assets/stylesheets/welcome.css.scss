@@ -1,3 +1,64 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "foundation_and_overrides";
+
+html {
+  height: 100%;
+}
+
+.hero {
+  width: 100%;
+  height: 33%;
+  background-color: $primary-color;
+  @include single-transition(all, 5000ms, ease-out);
+}
+
+$me-width: 240px;
+
+.me {
+  width: $me-width;
+  height: $me-width;
+  @include radius($global-rounded);
+  background-color: $gray-lighter;
+  position: absolute;
+  left: 50%;
+  margin-left: -($me-width / 2);
+  top: 33%;
+  margin-top: -($me-width / 2);
+  border: 10px solid $body-bg;
+}
+
+.welcome-title {
+  margin-top: ($me-width / 2);
+}
+
+.main-button {
+  @include single-transition(all, 5000ms, ease-out);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0px auto;
+  width: 200px;
+  display: block;
+  &:hover {
+    background-color: $gray-dark !important;
+  }
+}
+
+.social {
+  margin: 10px auto 20px auto;
+  display: block;
+  width: 200px;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    font-size: 18px;
+    a {
+      color: $gray-lighter;
+      padding: 20px;
+      &:hover {
+        color: $gray-dark;
+        @include single-transition();
+      }
+    }
+  }
+}

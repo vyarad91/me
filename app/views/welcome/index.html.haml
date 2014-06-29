@@ -1,2 +1,22 @@
-%h1 Hello World
-= link_to 'My Blog', controller: 'articles'
+.me
+.row
+  .small-12.columns
+    %h1.welcome-title.text-center Vicente Yarad
+    %p.text-center Web Designer
+    = link_to "Portafolio", articles_path, class: "main-button button radius"
+
+.row
+  .small-12.columns
+    %ul.social.inline-list.text-center
+      %li
+        = link_to "" do
+          = fa_icon "facebook"
+      %li
+        = link_to "" do
+          = fa_icon "twitter"
+      %li
+        = link_to "" do
+          = fa_icon "github"
+      %li
+        = link_to "" do
+          = fa_icon "envelope-o"
